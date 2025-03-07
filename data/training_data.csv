@@ -1,0 +1,231 @@
+ascx,type,spss
+"<%@ Control Language=""VB"" ClassName=""_Q1Page01DomandaQ021"" %>
+<%@ Import Namespace=""System.Web.UI.HtmlControls"" %>
+<%@ Import Namespace=""System.Data"" %>
+<%@ Import Namespace=""Questlab.Utility"" %>
+<%@ Import Namespace=""Questlab"" %>
+<!-- inizio domanda -->
+<script runat=""server"">
+
+</script>
+
+<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2. Lei riceve una parte del suo stipendio in welfare aziendale?</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section"">
+        <div class=""radio_group"">
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q021"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""1"" /><i></i>
+                S&igrave;, il contratto aziendale mi consente la scelta di convertire in tutto i in parte il Premio di risultato in welfare</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q022"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""2"" /><i></i>
+                S&igrave;, perch&eacute; direttamente ENGIM ha riconosciuto ai lavoratori beni e servizi di welfare</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q023"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""3"" /><i></i>
+                No, non ci sono iniziative di welfare in ENGIM</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q024"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""4"" /><i></i>
+                Non so</label>
+        </div>
+    </div>
+</fieldset>
+",radio,"VARIABLE LABEL Q02 ""2. Lei riceve una parte del suo stipendio in welfare aziendale?"".
+VALUE LABEL Q02
+1 ""Sì, il contratto aziendale mi consente la scelta di convertire in tutto i in parte il Premio di risultato in welfare"" 
+2 ""Sì, perché direttamente ENGIM ha riconosciuto ai lavoratori beni e servizi di welfare"" 
+3 ""No, non ci sono iniziative di welfare in ENGIM"" 
+4 ""Non so"" ."
+"<%@ Control Language=""VB"" ClassName=""_Q1Page02DomandaQ02a1"" %>
+<%@ Import Namespace=""System.Web.UI.HtmlControls"" %>
+<%@ Import Namespace=""System.Data"" %>
+<%@ Import Namespace=""Questlab.Utility"" %>
+<%@ Import Namespace=""Questlab"" %>
+<!-- inizio domanda -->
+<script runat=""server"">
+
+</script>
+
+<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2a. Sulle iniziative di welfare aziendale in ENGIM ritiene di essere informato in modo:</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section"">
+        <div class=""radio_group inline-group"">
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02a"" id=""Q02a1"" runat=""server"" gruppo=""1"" batteria=""Q02a"" completamento=""si"" value=""1"" /><i></i>
+                Adeguato</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02a"" id=""Q02a2"" runat=""server"" gruppo=""1"" batteria=""Q02a"" completamento=""si"" value=""2"" /><i></i>
+                Inadeguato</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02a"" id=""Q02a3"" runat=""server"" gruppo=""1"" batteria=""Q02a"" completamento=""si"" value=""3"" /><i></i>
+                Non saprei</label>
+        </div>
+    </div>
+</fieldset>
+",radio,"VARIABLE LABEL Q02a ""2a. Sulle iniziative di welfare aziendale in ENGIM ritiene di essere informato in modo:"".
+VALUE LABEL Q02a
+1 ""Adeguato"" 
+2 ""Inadeguato"" 
+3 ""Non saprei"" ."
+"<%@ Control Language=""VB"" ClassName=""_Q1Page02DomandaQ02b1"" %>
+<%@ Import Namespace=""System.Web.UI.HtmlControls"" %>
+<%@ Import Namespace=""System.Data"" %>
+<%@ Import Namespace=""Questlab.Utility"" %>
+<%@ Import Namespace=""Questlab"" %>
+<!-- inizio domanda -->
+<script runat=""server"">
+
+</script>
+
+<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2b. Rispetto a quanto previsto dal suo contratto, in che misura ritiene che ENGIM spenda per le iniziative di welfare?</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section"">
+        <div class=""radio_group"">
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b1"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""1"" /><i></i>
+                Superiore</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b2"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""2"" /><i></i>
+                Esattamente a quanto previsto</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b3"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""3"" /><i></i>
+                Inferiore</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b4"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""4"" /><i></i>
+                Ancora non spende</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b5"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""5"" /><i></i>
+                Non so</label>
+        </div>
+    </div>
+</fieldset>
+",radio,"VARIABLE LABEL Q02b ""2b. Rispetto a quanto previsto dal suo contratto, in che misura ritiene che ENGIM spenda per le iniziative di welfare?"".
+VALUE LABEL Q02b
+1 ""Superiore"" 
+2 ""Esattamente a quanto previsto"" 
+3 ""Inferiore"" 
+4 ""Ancora non spende"" 
+5 ""Non so"" ."
+"<%@ Control Language=""VB"" ClassName=""_Q1Page03DomandaQ02d1"" %>
+<%@ Import Namespace=""System.Web.UI.HtmlControls"" %>
+<%@ Import Namespace=""System.Data"" %>
+<%@ Import Namespace=""Questlab.Utility"" %>
+<%@ Import Namespace=""Questlab"" %>
+<!-- inizio domanda -->
+<script runat=""server"">
+
+</script>
+
+<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2d. Da settembre 2022, ENGIM ha introdotto un sistema di welfare aziendale. Assegnando un voto da 1 a 5, pu&ograve; dire qual &egrave; il suo grado di soddisfazione dell'iniziativa?</span>
+        <span class=""NoteDomanda"">(dove 1 = per nulla e 5 = moltissimo)</span>
+    </div>
+    <div class=""section rating"">
+        <%--ATTENZIONE: Gli item verranno visualizzati partendo da destra e procedendo verso sinistra, ossia compariranno in ordine inverso rispetto a quello qui sotto!--%>
+        <div class=""tdRating-5-star"">
+            <div class=""rating-group"" style=""width: -moz-fit-content; width: -webkit-fit-content; margin: auto;"">
+                <div class=""ratings"">
+                    <input type=""radio"" name=""Q02d"" id=""Q02d5"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""5"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""5=moltissimo""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d4"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""4"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""4""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d3"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""3"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""3""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d2"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""2"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""2""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d1"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""1"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""1=per nulla""></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+",rating,"VARIABLE LABEL Q02d ""2d. Da settembre 2022, ENGIM ha introdotto un sistema di welfare aziendale. Assegnando un voto da 1 a 5, può dire qual è il suo grado di soddisfazione dell'iniziativa?"".
+VALUE LABEL Q02d
+1 ""1=per nulla"" 
+2 ""2"" 
+3 ""3"" 
+4 ""4"" 
+5 ""5=moltissimo"" ."
+"<%@ Control Language=""VB"" ClassName=""_Q1Page01DomandaQ011"" %>
+<%@ Import Namespace=""System.Web.UI.HtmlControls"" %>
+<%@ Import Namespace=""System.Data"" %>
+<%@ Import Namespace=""Questlab.Utility"" %>
+<%@ Import Namespace=""Questlab"" %>
+<!-- inizio domanda -->
+<script runat=""server"">
+
+</script>
+
+<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">1. A suo avviso, le seguenti affermazioni sono vere o false?</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section ptop_10"">
+        <table class=""tabellaDomanda tabellaDomandaMatriceOriz resizecols f_18"" border=""0"">
+            <tr>
+                <td class=""tdAngoloTabella W_30p""></td>
+                <td class=""tdEtichettaDomandaBox"">Vero</td>
+                <td class=""tdEtichettaDomandaBox"">Falso</td>
+            </tr>
+            <tr>
+                <td class=""tdEtichettaTabella"">Gli aumenti in busta paga sono tassati come il resto del salario</td>
+                <td titolodomandabox="""">
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Vero"">
+                            <input type=""radio"" name=""Q01_1"" id=""Q01_11"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""1"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Falso"">
+                            <input type=""radio"" name=""Q01_1"" id=""Q01_12"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""2"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class=""tdEtichettaTabella"">Le agevolazioni con il welfare aziendale (spese sanitarie, buoni spesa, benzina, ecc.) non sono tassate come il resto del salario</td>
+                <td titolodomandabox="""">
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Vero"">
+                            <input type=""radio"" name=""Q01_2"" id=""Q01_21"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""1"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Falso"">
+                            <input type=""radio"" name=""Q01_2"" id=""Q01_22"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""2"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+</fieldset>",matrice,"* ""1. A suo avviso, le seguenti affermazioni sono vere o false?"".
+VARIABLE LABEL Q01_1 ""Gli aumenti in busta paga sono tassati come il resto del salario"".
+VARIABLE LABEL Q01_2 ""Le agevolazioni con il welfare aziendale (spese sanitarie, buoni spesa, benzina, ecc.) non sono tassate come il resto del salario"".
+VALUE LABEL Q01_1
+1 ""Vero"" 
+2 ""Falso"" ."

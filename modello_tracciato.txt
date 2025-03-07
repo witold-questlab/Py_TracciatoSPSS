@@ -1,0 +1,295 @@
+VARIABLE LABEL Q01 "1. Può indicare il settore di attività in cui opera la sua impresa?".
+VARIABLE LABEL Q019_AL "1. Altre attività dei servizi (specificare)".
+VALUE LABELS Q01
+1 "Manifattura"
+2 "Costruzioni"
+3 "Agricoltura, silvicoltura, pesca"
+4 "Commercio, alberghi e ristoranti"
+9 "Altre attività dei servizi".
+
+VARIABLE LABEL Q02 "2. Nell'ultimo biennio 2023-2024 ha effettuato assunzioni e/o attivato tirocini?".
+VALUE LABELS Q02
+1 "Abbiamo sia effettuato assunzioni che attivato tirocini"
+2 "Abbiamo effettuato assunzioni"
+3 "Abbiamo attivato tirocini"
+4 "Non abbiamo né effettuato assunzioni né attivato tirocini".
+
+VARIABLE LABEL Q03 "3. La sua impresa intende effettuare nuove assunzioni nei prossimi 12 mesi (2025)?".
+VALUE LABELS Q03
+1 "Sì"
+2 "No".
+
+VARIABLE LABEL Q04 "4. La sua impresa ha avuto difficoltà nel reperire personale nel corso del 2024?".
+VALUE LABELS Q04
+1 "Sì"
+2 "No".
+
+*"5. Può indicare quali sono le professionalità più difficili da reperire per la sua impresa nel corso del 2024?".
+VARIABLE LABEL Q05_1 "Dirigenti, direttori".
+VARIABLE LABEL Q05_2 "Professioni intellettuali, impiegati direttivi".
+VARIABLE LABEL Q05_3 "Impiegati di concetto, tecnici".
+VARIABLE LABEL Q05_4 "Impiegati esecutivi, di ufficio, segretari".
+VARIABLE LABEL Q05_5 "Commessi, camerieri, venditori".
+VARIABLE LABEL Q05_6 "Capo-operaio /operai specializzati".
+VARIABLE LABEL Q05_7 "Operai qualificati, conduttori di macchine".
+VARIABLE LABEL Q05_8 "Operai comuni, manovali, lavori manuali non qualificati".
+VARIABLE LABEL Q05_9 "Altro".
+VARIABLE LABEL Q059_AL "5. Altro (specificare)".
+
+*"6.1. Servizi offerti alle imprese: Lo conosce?".
+VARIABLE LABEL Q06_11 "Informazioni relative alle comunicazioni previste per legge".
+VARIABLE LABEL Q06_12 "Incontro domanda offerta di lavoro".
+VARIABLE LABEL Q06_13 "Informazioni e consulenza su assunzioni agevolate e incentivi alle imprese".
+VARIABLE LABEL Q06_14 "Collocamento mirato disabili".
+VARIABLE LABEL Q06_15 "Promozione tirocini".
+VARIABLE LABEL Q06_16 "Numero verde servizi imprese".
+VARIABLE LABEL Q06_17 "Newsletter servizi imprese".
+VALUE LABELS Q06_11 Q06_12 Q06_13 Q06_14 Q06_15 Q06_16 Q06_17
+1 "Sì"
+2 "No".
+
+*"6.2. Servizi offerti alle imprese: Lo ha utilizzato?".
+VARIABLE LABEL Q06_21 "Informazioni relative alle comunicazioni previste per legge".
+VARIABLE LABEL Q06_22 "Incontro domanda offerta di lavoro".
+VARIABLE LABEL Q06_23 "Informazioni e consulenza su assunzioni agevolate e incentivi alle imprese".
+VARIABLE LABEL Q06_24 "Collocamento mirato disabili".
+VARIABLE LABEL Q06_25 "Promozione tirocini".
+VARIABLE LABEL Q06_26 "Numero verde servizi imprese".
+VARIABLE LABEL Q06_27 "Newsletter servizi imprese".
+VALUE LABELS Q06_21 Q06_22 Q06_23 Q06_24 Q06_25 Q06_26 Q06_27
+1 "Sì"
+2 "No".
+
+*"6.3. Servizi offerti alle imprese: È stato utile?".
+VARIABLE LABEL Q06_31 "Informazioni relative alle comunicazioni previste per legge".
+VARIABLE LABEL Q06_32 "Incontro domanda offerta di lavoro".
+VARIABLE LABEL Q06_33 "Informazioni e consulenza su assunzioni agevolate e incentivi alle imprese".
+VARIABLE LABEL Q06_34 "Collocamento mirato disabili".
+VARIABLE LABEL Q06_35 "Promozione tirocini".
+VARIABLE LABEL Q06_36 "Numero verde servizi imprese".
+VARIABLE LABEL Q06_37 "Newsletter servizi imprese".
+VALUE LABELS Q06_31 Q06_32 Q06_33 Q06_34 Q06_35 Q06_36 Q06_37
+1 "Sì"
+2 "No".
+
+*"6.4. Servizi offerti alle imprese: Quanto è soddisfatto?".
+VARIABLE LABEL Q06_41 "Informazioni relative alle comunicazioni previste per legge".
+VARIABLE LABEL Q06_42 "Incontro domanda offerta di lavoro".
+VARIABLE LABEL Q06_43 "Informazioni e consulenza su assunzioni agevolate e incentivi alle imprese".
+VARIABLE LABEL Q06_44 "Collocamento mirato disabili".
+VARIABLE LABEL Q06_45 "Promozione tirocini".
+VARIABLE LABEL Q06_46 "Numero verde servizi imprese".
+VARIABLE LABEL Q06_47 "Newsletter servizi imprese".
+VALUE LABEL Q06_41
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q06_42
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q06_43
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q06_44
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q06_45
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q06_46
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q06_47
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+
+VARIABLE LABEL Q07 "7. Qual è il motivo principale per il quale l'azienda non ha utilizzato nel corso del 2024 il Centro per l'impiego per il reclutamento del personale?".
+VARIABLE LABEL Q079_AL "7. Altro (specificare)".
+VALUE LABELS Q07
+1 "È preferibile una conoscenza diretta dei candidati"
+2 "Sono preferibili le agenzie private"
+3 "Gli altri canali finora utilizzati sono stati soddisfacenti"
+4 "Utilizziamo CV ricevuti direttamente da candidati"
+9 "Altro".
+
+*"8. Per quali motivi si è rivolto ai servizi pubblici per l'impiego nel corso del 2024?".
+VARIABLE LABEL Q081 "La necessità di reperire personale in tempi brevi".
+VARIABLE LABEL Q082 "Ricercare personale con profili professionali elevati e/o specializzati".
+VARIABLE LABEL Q083 "Ricercare personale con profili professionali generici".
+VARIABLE LABEL Q084 "Avevo già usufruito del servizio ed ero rimasto soddisfatto".
+VARIABLE LABEL Q085 "Non ho trovato il personale cercato con altri canali/strumenti".
+VARIABLE LABEL Q086 "La gratuità del servizio".
+VARIABLE LABEL Q089 "Altro".
+VARIABLE LABEL Q089_AL "8. Altro (specificare)".
+
+*"9. Di quali servizi per la ricerca e selezione del personale offerti dal Centro per l'impiego ha usufruito nel corso del 2024?".
+VARIABLE LABEL Q091 "Pubblicazione dell'offerta di lavoro".
+VARIABLE LABEL Q092 "Preselezione del personale".
+VARIABLE LABEL Q093 "Selezione del personale insieme alle imprese o per conto delle imprese".
+VARIABLE LABEL Q094 "Informazione e consulenza su incentivi e assunzioni agevolate".
+VARIABLE LABEL Q099 "Altro".
+VARIABLE LABEL Q099_AL "9. Altro (specificare)".
+
+VARIABLE LABEL Q10 "10. La sua azienda ha ricevuto un elenco di nominativi/curricula dal CPI in risposta a una richiesta di servizio di incontro domanda/offerta lavoro nel corso del 2024?".
+VALUE LABELS Q10
+1 "Sì, e qualcuno è stato assunto"
+2 "Sì, ma nessuno è stato assunto"
+3 "No, non sono stati individuati candidati con il profilo richiesto"
+4 "Non ricordo / dato non disponibile".
+
+VARIABLE LABEL Q11 "11. Perché non è stato assunto alcun candidato? (motivo principale)".
+VARIABLE LABEL Q115_AL "11. Altro (specificare)".
+VALUE LABELS Q11
+1 "I candidati non erano disponibili / non si sono presentati alla selezione"
+2 "I profili non erano attinenti alle richieste dell'impresa"
+3 "Abbiamo trovato candidati più rapidamente con altri canali"
+4 "Abbiamo rinunciato ad effettuare l'assunzione"
+5 "Altro".
+
+*"12. In merito al servizio di incontro domanda-offerta di lavoro nel corso del 2024, quali sono stati i principali motivi di soddisfazione?".
+VARIABLE LABEL Q121 "L'elenco dei candidati/CV è stato inviato tempestivamente".
+VARIABLE LABEL Q122 "I profili dei candidati erano attinenti e adeguati alle esigenze dell'impresa".
+VARIABLE LABEL Q123 "I CV attinenti erano in numero esiguo e scelti con precisione".
+VARIABLE LABEL Q124 "Il numero dei CV attinenti era rilevante e si poteva scegliere".
+VARIABLE LABEL Q125 "L'operatore ha dimostrato professionalità".
+VARIABLE LABEL Q126 "La gratuità del servizio".
+
+*"13. In merito al servizio di incontro domanda-offerta di lavoro nel corso del 2024, quali sono stati i principali motivi di insoddisfazione?".
+VARIABLE LABEL Q131 "Non è stato fornito alcun elenco".
+VARIABLE LABEL Q132 "L'elenco dei candidati/CV non è stato inviato tempestivamente".
+VARIABLE LABEL Q133 "I profili dei candidati erano troppo generici e inadeguati alle esigenze dell'impresa".
+VARIABLE LABEL Q134 "I CV erano in numero esiguo".
+VARIABLE LABEL Q135 "Il numero dei CV attinenti era troppo numeroso e non utilizzabile".
+VARIABLE LABEL Q136 "I candidati contattati dall'azienda non erano disponibili all'offerta".
+VARIABLE LABEL Q137 "L'operatore non si è mostrato disponibile e competente".
+
+VARIABLE LABEL Q14 "14. La sua impresa ha mai partecipato ad eventi presso il CPI o promossi dal CPI nel corso del 2024, durante i quali le imprese del territorio potevano incontrare persone in cerca di un impiego?".
+VALUE LABELS Q14
+1 "Sì"
+2 "No, ma sarei interessato"
+3 "No, e non sono interessato".
+
+*"15. Le chiediamo una valutazione del suo grado di soddisfazione per ciascuno dei seguenti aspetti relativi ai CPI nel corso del 2023".
+VARIABLE LABEL Q151 "Orari di apertura o di accessibilità al servizio (anche da remoto)".
+VARIABLE LABEL Q152 "Semplicità modulistica".
+VARIABLE LABEL Q153 "Chiarezza e completezza delle informazioni ricevute".
+VARIABLE LABEL Q154 "Tempestività delle risposte".
+VARIABLE LABEL Q155 "Cortesia e disponibilità del personale".
+VARIABLE LABEL Q156 "Competenza del personale".
+VARIABLE LABEL Q157 "Livello di conoscenza del mercato del lavoro locale degli operatori".
+VALUE LABEL Q151
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q152
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q153
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q154
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q155
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q156
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q157
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+
+VARIABLE LABEL Q15_1 "15.1 Ha utilizzato il portale Toscana Lavoro nell'anno in corso?".
+VALUE LABELS Q15_1
+1 "Sì"
+2 "No".
+
+*"15.2 Se sì, esprima la sua soddisfazione sui seguenti argomenti:".
+VARIABLE LABEL Q15_21 "Facilità di utilizzo".
+VARIABLE LABEL Q15_22 "Chiarezza delle informazioni/richieste presenti".
+VARIABLE LABEL Q15_23 "Completezza delle informazioni/richieste presenti".
+VALUE LABEL Q15_21
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q15_22
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+VALUE LABEL Q15_23
+1 "Molto"
+2 "Abbastanza"
+3 "Poco"
+4 "Per niente".
+
+*"16. Secondo lei, i CPI quali aspetti dovrebbero curare e sviluppare di più per venire incontro alle esigenze della sua impresa?".
+VARIABLE LABEL Q161 "Informazione costante su incentivi alle imprese".
+VARIABLE LABEL Q162 "Informazione costante sulle dinamiche del mercato del lavoro locale".
+VARIABLE LABEL Q163 "Analisi dei fabbisogni professionali delle imprese".
+VARIABLE LABEL Q164 "Consulenza personalizzata".
+VARIABLE LABEL Q165 "Maggiore flessibilità e velocità nelle risposte".
+VARIABLE LABEL Q166 "Maggiore diffusione e promozione dei servizi erogati".
+VARIABLE LABEL Q167 "Altro".
+VARIABLE LABEL Q167_AL "16. Altro (specificare)".
+
+VARIABLE LABEL Q17 "17. Soddisfazione complessiva riguardo ai servizi ricevuti".
+VALUE LABEL Q17
+1 "1=soddisfazione minima"
+2 "2"
+3 "3"
+4 "4"
+5 "5"
+6 "6"
+7 "7"
+8 "8"
+9 "9"
+10 "10=soddisfazione massima".
+
+VARIABLE LABEL Q18 "18. Soddisfazione riguardo al personale".
+1 "1=soddisfazione minima"
+2 "2"
+3 "3"
+4 "4"
+5 "5"
+6 "6"
+7 "7"
+8 "8"
+9 "9"
+10 "10=soddisfazione massima"
+99 "Non sono entrato in contatto con il personale".
+
+VARIABLE LABEL Q19 "19. Come impresa ha partecipato alla Fiera Toscana del lavoro svolta nell'ottobre 2024?".
+VALUE LABELS Q19
+1 "Sì"
+2 "No".
+
+VARIABLE LABEL OSSERVAZIONI "Note e/o osservazioni".

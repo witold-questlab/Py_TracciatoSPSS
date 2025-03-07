@@ -1,0 +1,4 @@
+da fare:
+cancellare da generated_data csv e json se fatto update;
+tab import/export model
+creazione del tracciato
