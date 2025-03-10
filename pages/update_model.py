@@ -2,10 +2,10 @@ from pages.shared import *
 
 class UpdatePage(ttk.Frame):
     def __init__(self, parent,
-                 generated_json_file="./data/generated_data.json",
-                 training_csv="./data/training_data.csv",
-                 training_json="./data/training_data.json",
-                 model_file="./data/model.pkl"):
+                 generated_json_file=resource_path("data/generated_data.json"),
+                 training_csv=resource_path("data/training_data.csv"),
+                 training_json=resource_path("data/training_data.json"),
+                 model_file=resource_path("data/model.pkl")):
         super().__init__(parent)
         self.generated_json_file = generated_json_file
         self.training_csv = training_csv
@@ -21,7 +21,7 @@ class UpdatePage(ttk.Frame):
         self.current_index = 0
         
         # Predefined type options (should match those used in training)
-        self.type_options = ["altro", "radio", "sino & co", "checklist", "matrice", "textlist", "matrice verticale", "matrice primosecondo", "rating", "matrice rating"]
+        self.type_options = option_dropdown
         
         self.create_widgets()
         self.load_current_record()

@@ -2,17 +2,17 @@ from pages.shared import *
 
 class WorkPage(ttk.Frame):
     def __init__(self, parent,
-                 model_file="./data/model.pkl",
-                 output_txt="./data/generated_spss.txt",
-                 output_csv="./data/generated_data.csv",
-                 output_json="./data/generated_data.json"):
+                 model_file=resource_path("data/model.pkl"),
+                 output_txt=resource_path("data/generated_spss.txt"),
+                 output_csv=resource_path("data/generated_data.csv"),
+                 output_json=resource_path("data/generated_data.json")):
         super().__init__(parent)
         self.model_file = model_file
         self.output_txt = output_txt
         self.output_csv = output_csv
         self.output_json = output_json
         # Predefined type options (should match those used in training)
-        self.type_options = ["altro", "radio", "sino & co", "checklist", "matrice", "textlist", "matrice verticale", "matrice primosecondo", "rating", "matrice rating"]
+        self.type_options = option_dropdown
         self.selected_folder = ""
         self.create_widgets()
         self.model_loaded = False

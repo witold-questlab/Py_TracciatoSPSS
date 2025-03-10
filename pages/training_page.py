@@ -2,9 +2,9 @@ from pages.shared import *
 
 class TrainPage(ttk.Frame):
     def __init__(self, parent, 
-                 csv_file="./data/training_data.csv",
-                 json_file="./data/training_data.json",                   
-                 model_file="./data/model.pkl"):
+                 csv_file=resource_path("data/training_data.csv"),
+                 json_file=resource_path("data/training_data.json"),                   
+                 model_file=resource_path("data/model.pkl")):
         super().__init__(parent)
         self.csv_file = csv_file
         self.json_file = json_file
@@ -12,7 +12,7 @@ class TrainPage(ttk.Frame):
         ensure_csv_exists(self.csv_file)
         ensure_json_exists(self.json_file)
         self.ascx_content = ""
-        self.type_options = ["altro", "radio", "sino & co", "checklist", "matrice", "textlist", "matrice verticale", "matrice primosecondo", "rating", "matrice rating"]
+        self.type_options = option_dropdown
         self.create_widgets()
 
     def create_widgets(self):

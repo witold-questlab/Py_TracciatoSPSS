@@ -1,7 +1,7 @@
 from pages.shared import *
 
 class SettingsPage(ttk.Frame):
-    def __init__(self, parent, model_file="./data/model.pkl"):
+    def __init__(self, parent, model_file=resource_path("data/model.pkl")):
         super().__init__(parent)
         self.model_file = model_file
         self.create_widgets()
