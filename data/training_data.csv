@@ -229,3 +229,429 @@ VARIABLE LABEL Q01_2 ""Le agevolazioni con il welfare aziendale (spese sanitarie
 VALUE LABEL Q01_1
 1 ""Vero"" 
 2 ""Falso"" ."
+"<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">1. A suo avviso, le seguenti affermazioni sono vere o false?</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section ptop_10"">
+        <table class=""tabellaDomanda tabellaDomandaMatriceOriz resizecols f_18"" border=""0"">
+            <tr>
+                <td class=""tdAngoloTabella W_30p""></td>
+                <td class=""tdEtichettaDomandaBox"">Vero</td>
+                <td class=""tdEtichettaDomandaBox"">Falso</td>
+            </tr>
+            <tr>
+                <td class=""tdEtichettaTabella"">Gli aumenti in busta paga sono tassati come il resto del salario</td>
+                <td titolodomandabox="""">
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Vero"">
+                            <input type=""radio"" name=""Q01_1"" id=""Q01_11"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""1"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Falso"">
+                            <input type=""radio"" name=""Q01_1"" id=""Q01_12"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""2"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class=""tdEtichettaTabella"">Le agevolazioni con il welfare aziendale (spese sanitarie, buoni spesa, benzina, ecc.) non sono tassate come il resto del salario</td>
+                <td titolodomandabox="""">
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Vero"">
+                            <input type=""radio"" name=""Q01_2"" id=""Q01_21"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""1"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class=""radio clear"">
+                        <span tipo=""radio"" etichettadomandabox=""Falso"">
+                            <input type=""radio"" name=""Q01_2"" id=""Q01_22"" runat=""server"" gruppo=""1"" batteria=""Q01"" completamento=""si"" value=""2"" /><i></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+</fieldset>",matrice,"* ""1. A suo avviso, le seguenti affermazioni sono vere o false?"".
+VARIABLE LABEL Q01_1 ""Gli aumenti in busta paga sono tassati come il resto del salario"".
+VARIABLE LABEL Q01_2 ""Le agevolazioni con il welfare aziendale (spese sanitarie, buoni spesa, benzina, ecc.) non sono tassate come il resto del salario"".
+VALUE LABEL Q01_1
+1 ""Vero"" 
+2 ""Falso"" .
+VALUE LABEL Q01_2
+1 ""Vero"" 
+2 ""Falso"" ."
+"<%@ Control Language=""VB"" ClassName=""_Q1Page01DomandaQ021"" %>
+<%@ Import Namespace=""System.Web.UI.HtmlControls"" %>
+<%@ Import Namespace=""System.Data"" %>
+<%@ Import Namespace=""Questlab.Utility"" %>
+<%@ Import Namespace=""Questlab"" %>
+<!-- inizio domanda -->
+<script runat=""server"">
+
+</script>
+
+<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2. Lei riceve una parte del suo stipendio in welfare aziendale?</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section"">
+        <div class=""radio_group"">
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q021"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""1"" /><i></i>
+                S&igrave;, il contratto aziendale mi consente la scelta di convertire in tutto i in parte il Premio di risultato in welfare</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q022"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""2"" /><i></i>
+                S&igrave;, perch&eacute; direttamente ENGIM ha riconosciuto ai lavoratori beni e servizi di welfare</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q023"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""3"" /><i></i>
+                No, non ci sono iniziative di welfare in ENGIM</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02"" id=""Q024"" runat=""server"" gruppo=""1"" batteria=""Q02"" completamento=""si"" value=""4"" /><i></i>
+                Non so</label>
+        </div>
+    </div>
+</fieldset>",radio,"VARIABLE LABEL Q02 ""2. Lei riceve una parte del suo stipendio in welfare aziendale?"".
+VALUE LABEL Q02
+1 ""Sì, il contratto aziendale mi consente la scelta di convertire in tutto i in parte il Premio di risultato in welfare"" 
+2 ""Sì, perché direttamente ENGIM ha riconosciuto ai lavoratori beni e servizi di welfare"" 
+3 ""No, non ci sono iniziative di welfare in ENGIM"" 
+4 ""Non so"" ."
+"<fieldset>
+    <h2>1. IL WELFARE AZIENDALE</h2>
+</fieldset>",altro,niente
+"<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2a. Sulle iniziative di welfare aziendale in ENGIM ritiene di essere informato in modo:</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section"">
+        <div class=""radio_group inline-group"">
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02a"" id=""Q02a1"" runat=""server"" gruppo=""1"" batteria=""Q02a"" completamento=""si"" value=""1"" /><i></i>
+                Adeguato</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02a"" id=""Q02a2"" runat=""server"" gruppo=""1"" batteria=""Q02a"" completamento=""si"" value=""2"" /><i></i>
+                Inadeguato</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02a"" id=""Q02a3"" runat=""server"" gruppo=""1"" batteria=""Q02a"" completamento=""si"" value=""3"" /><i></i>
+                Non saprei</label>
+        </div>
+    </div>
+</fieldset>",radio,"VARIABLE LABEL Q02a ""2a. Sulle iniziative di welfare aziendale in ENGIM ritiene di essere informato in modo:"".
+VALUE LABEL Q02a
+1 ""Adeguato"" 
+2 ""Inadeguato"" 
+3 ""Non saprei"" ."
+"<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2b. Rispetto a quanto previsto dal suo contratto, in che misura ritiene che ENGIM spenda per le iniziative di welfare?</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section"">
+        <div class=""radio_group"">
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b1"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""1"" /><i></i>
+                Superiore</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b2"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""2"" /><i></i>
+                Esattamente a quanto previsto</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b3"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""3"" /><i></i>
+                Inferiore</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b4"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""4"" /><i></i>
+                Ancora non spende</label>
+            <label class=""radio clear"">
+                <input type=""radio"" name=""Q02b"" id=""Q02b5"" runat=""server"" gruppo=""1"" batteria=""Q02b"" completamento=""si"" value=""5"" /><i></i>
+                Non so</label>
+        </div>
+    </div>
+</fieldset>",radio,"VARIABLE LABEL Q02b ""2b. Rispetto a quanto previsto dal suo contratto, in che misura ritiene che ENGIM spenda per le iniziative di welfare?"".
+VALUE LABEL Q02b
+1 ""Superiore"" 
+2 ""Esattamente a quanto previsto"" 
+3 ""Inferiore"" 
+4 ""Ancora non spende"" 
+5 ""Non so"" ."
+"<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">2d. Da settembre 2022, ENGIM ha introdotto un sistema di welfare aziendale. Assegnando un voto da 1 a 5, pu&ograve; dire qual &egrave; il suo grado di soddisfazione dell'iniziativa?</span>
+        <span class=""NoteDomanda"">(dove 1 = per nulla e 5 = moltissimo)</span>
+    </div>
+    <div class=""section rating"">
+        <%--ATTENZIONE: Gli item verranno visualizzati partendo da destra e procedendo verso sinistra, ossia compariranno in ordine inverso rispetto a quello qui sotto!--%>
+        <div class=""tdRating-5-star"">
+            <div class=""rating-group"" style=""width: -moz-fit-content; width: -webkit-fit-content; margin: auto;"">
+                <div class=""ratings"">
+                    <input type=""radio"" name=""Q02d"" id=""Q02d5"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""5"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""5=moltissimo""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d4"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""4"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""4""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d3"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""3"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""3""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d2"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""2"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""2""></i>
+                    </label>
+                    <input type=""radio"" name=""Q02d"" id=""Q02d1"" runat=""server"" gruppo=""1"" batteria=""Q02d"" completamento=""si"" value=""1"" />
+                    <label for="""">
+                        <i class=""fas fa-2x fa-star"" title=""1=per nulla""></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>",rating,"VARIABLE LABEL Q02d ""2d. Da settembre 2022, ENGIM ha introdotto un sistema di welfare aziendale. Assegnando un voto da 1 a 5, può dire qual è il suo grado di soddisfazione dell'iniziativa?"".
+VALUE LABEL Q02d
+1 ""1=per nulla"" 
+2 ""2"" 
+3 ""3"" 
+4 ""4"" 
+5 ""5=moltissimo"" ."
+"<fieldset>
+    <h2>2. INTELLIGENZA ARTIFICIALE</h2>
+</fieldset>",altro,niente
+"<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">4. A suo avviso, l'intelligenza artificiale &egrave;:</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section"">
+        <div class=""radio_group"" id=""Q04Table"" runat=""server"">
+            <label class=""radio clear"" id=""riga0"" runat=""server"">
+                <input type=""radio"" name=""Q04"" id=""Q041"" runat=""server"" gruppo=""2"" batteria=""Q04"" completamento=""si"" value=""1"" /><i></i>
+                Una macchina con capacit&agrave; umane quali il ragionamento, l'apprendimento, la pianificazione e la creativit&agrave;</label>
+            <label class=""radio clear"" id=""riga1"" runat=""server"">
+                <input type=""radio"" name=""Q04"" id=""Q042"" runat=""server"" gruppo=""2"" batteria=""Q04"" completamento=""si"" value=""2"" /><i></i>
+                Un computer in grado di fare calcoli e analizzare dati molto velocemente</label>
+            <label class=""radio clear"" id=""riga2"" runat=""server"">
+                <input type=""radio"" name=""Q04"" id=""Q043"" runat=""server"" gruppo=""2"" batteria=""Q04"" completamento=""si"" value=""3"" /><i></i>
+                Un robot che sostituisce il lavoro umano</label>
+            <label class=""radio clear"" id=""riga3"" runat=""server"">
+                <input type=""radio"" name=""Q04"" id=""Q044"" runat=""server"" gruppo=""2"" batteria=""Q04"" completamento=""si"" value=""4"" /><i></i>
+                Un cervello artificiale che pu&ograve; sostituire ed essere trapiantato nel corpo umano</label>
+            <label class=""radio clear"" id=""riga4"" runat=""server"">
+                <input type=""radio"" name=""Q04"" id=""Q045"" runat=""server"" gruppo=""2"" batteria=""Q04"" completamento=""si"" value=""5"" /><i></i>
+                Non so</label>
+        </div>
+    </div>
+    <input type=""hidden"" id=""RandomQ04_Within1"" runat=""server"" batteria=""Q04"" />
+</fieldset>",altro,"VARIABLE LABEL Q04 ""4. A suo avviso, l'intelligenza artificiale è:"".
+VALUE LABEL Q04
+1 ""Una macchina con capacità umane quali il ragionamento, l'apprendimento, la pianificazione e la creatività"" 
+2 ""Un computer in grado di fare calcoli e analizzare dati molto velocemente"" 
+3 ""Un robot che sostituisce il lavoro umano"" 
+4 ""Un cervello artificiale che può sostituire ed essere trapiantato nel corpo umano"" 
+5 ""Non so"" ."
+"<fieldset>
+    <div class=""section"">
+        <span class=""TitoloDomanda"">3. A suo avviso, quali sono/sarebbero i due obiettivi principali che l'introduzione di iniziative di welfare aziendale raggiungono?</span>
+        <span class=""NoteDomanda""></span>
+    </div>
+    <div class=""section ptop_10"">
+        <table class=""tabellaDomanda tabellaDomandaMatriceVertResponsive zebra2"" border=""0"">
+            <colgroup>
+                <col span=""1"" class=""colvert1"" />
+                <col span=""1"" class=""colvert2"" />
+                <col span=""1"" class=""colvert1"" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <td class=""tdAngoloTabella w_30p""></td>
+                    <td class=""tdEtichettaDomandaBox"">1&deg; pi&ugrave; importante</td>
+                    <td class=""tdEtichettaDomandaBox"">2&deg; pi&ugrave; importante</td>
+                </tr>
+            </thead>
+            <tbody id=""Q03Table"" runat=""server"">
+                <tr>
+                    <td class=""tdEtichettaDomanda"" style=""vertical-align: inherit; text-align: left;"">
+                        <div id=""Col1"" runat=""server"">
+                            <label id=""c1riga1"" runat=""server"" class=""bordato pleft_10"" ordine=""1"" style=""line-height: 35px;"">Rendere sostenibile a lungo termine il successo aziendale</label>
+                            <label id=""c1riga2"" runat=""server"" class=""bordato pleft_10"" ordine=""2"" style=""line-height: 35px;"">Fidelizzare i lavoratori pi&ugrave; qualificati</label>
+                            <label id=""c1riga3"" runat=""server"" class=""bordato pleft_10"" ordine=""3"" style=""line-height: 35px;"">Fidelizzare i lavoratori in generale</label>
+                            <label id=""c1riga4"" runat=""server"" class=""bordato pleft_10"" ordine=""4"" style=""line-height: 35px;"">Migliorare il clima aziendale e la soddisfazione dei lavoratori</label>
+                            <label id=""c1riga5"" runat=""server"" class=""bordato pleft_10"" ordine=""5"" style=""line-height: 35px;"">Migliorare la reputazione dell'impresa/ente</label>
+                            <label id=""c1riga6"" runat=""server"" class=""bordato pleft_10"" ordine=""6"" style=""line-height: 35px;"">Contenere il costo del lavoro</label>
+                            <label id=""c1riga7"" runat=""server"" class=""bordato pleft_10"" ordine=""7"" style=""line-height: 35px;"">Migliorare la produttivit&agrave; degli addetti</label>
+                            <label id=""c1riga8"" runat=""server"" class=""bordato pleft_10"" ordine=""8"" style=""line-height: 35px;"">Integrare le prestazioni del sistema socio-assistenziale</label>
+                        </div>
+                        <label id=""c1riga9"" runat=""server"" class=""bordato pleft_10 nessuno"" ordine=""9"" style=""line-height: 35px;"">Nessuno</label>
+                    </td>
+                    <td style=""vertical-align: inherit;"" etichettadomandabox=""1&deg; pi&ugrave; importante:"">
+                        <div class=""radio_group"">
+                            <div id=""Col2"" runat=""server"">
+                                <div id=""c2riga1"" runat=""server"" class=""bordato"" ordine=""1"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Rendere sostenibile a lungo termine il successo aziendale"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_11"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""1"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c2riga2"" runat=""server"" class=""bordato"" ordine=""2"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Fidelizzare i lavoratori pi&ugrave; qualificati"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_12"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""2"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c2riga3"" runat=""server"" class=""bordato"" ordine=""3"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Fidelizzare i lavoratori in generale"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_13"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""3"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c2riga4"" runat=""server"" class=""bordato"" ordine=""4"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Migliorare il clima aziendale e la soddisfazione dei lavoratori"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_14"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""4"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c2riga5"" runat=""server"" class=""bordato"" ordine=""5"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Migliorare la reputazione dell'impresa/ente"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_15"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""5"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c2riga6"" runat=""server"" class=""bordato"" ordine=""6"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Contenere il costo del lavoro"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_16"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""6"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c2riga7"" runat=""server"" class=""bordato"" ordine=""7"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Migliorare la produttivit&agrave; degli addetti"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_17"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""7"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c2riga8"" runat=""server"" class=""bordato"" ordine=""8"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Integrare le prestazioni del sistema socio-assistenziale"">
+                                            <input type=""radio"" name=""Q03_1"" id=""Q03_18"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""8"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=""c2riga9"" runat=""server"" class="""" ordine=""9"">
+                                <label class=""radio clear nessuno"">
+                                    <span tipo=""radio"" etichettadomanda=""Nessuno"">
+                                        <input type=""radio"" name=""Q03_1"" id=""Q03_19"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""9"" /><i></i>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                    <td style=""vertical-align: inherit;"" etichettadomandabox=""2&deg; pi&ugrave; importante:"">
+                        <div class=""radio_group"">
+                            <div id=""Col3"" runat=""server"">
+                                <div id=""c3riga1"" runat=""server"" class=""bordato"" ordine=""1"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Rendere sostenibile a lungo termine il successo aziendale"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_21"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""1"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c3riga2"" runat=""server"" class=""bordato"" ordine=""2"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Fidelizzare i lavoratori pi&ugrave; qualificati"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_22"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""2"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c3riga3"" runat=""server"" class=""bordato"" ordine=""3"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Fidelizzare i lavoratori in generale"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_23"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""3"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c3riga4"" runat=""server"" class=""bordato"" ordine=""4"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Migliorare il clima aziendale e la soddisfazione dei lavoratori"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_24"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""4"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c3riga5"" runat=""server"" class=""bordato"" ordine=""5"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Migliorare la reputazione dell'impresa/ente"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_25"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""5"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c3riga6"" runat=""server"" class=""bordato"" ordine=""6"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Contenere il costo del lavoro"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_26"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""6"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c3riga7"" runat=""server"" class=""bordato"" ordine=""7"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Migliorare la produttivit&agrave; degli addetti"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_27"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""7"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div id=""c3riga8"" runat=""server"" class=""bordato"" ordine=""8"">
+                                    <label class=""radio clear"">
+                                        <span tipo=""radio"" etichettadomanda=""Integrare le prestazioni del sistema socio-assistenziale"">
+                                            <input type=""radio"" name=""Q03_2"" id=""Q03_28"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""8"" /><i></i>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=""c3riga9"" runat=""server"" class="""" ordine=""9"">
+                                <label class=""radio clear nessuno"">
+                                    <span tipo=""radio"" etichettadomanda=""Nessuno"">
+                                        <input type=""radio"" name=""Q03_2"" id=""Q03_29"" runat=""server"" gruppo=""1"" batteria=""Q03"" completamento=""si"" value=""9"" /><i></i>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</fieldset>",matrice primosecondo,"* ""3. A suo avviso, quali sono/sarebbero i due obiettivi principali che l'introduzione di iniziative di welfare aziendale raggiungono?"".
+VARIABLE LABEL Q03_1 ""1° più importante"".
+VARIABLE LABEL Q03_2 ""2° più importante"".
+VALUE LABEL Q03_1
+1 ""Rendere sostenibile a lungo termine il successo aziendale"" 
+2 ""Fidelizzare i lavoratori più qualificati"" 
+3 ""Fidelizzare i lavoratori in generale"" 
+4 ""Migliorare il clima aziendale e la soddisfazione dei lavoratori"" 
+5 ""Migliorare la reputazione dell'impresa/ente"" 
+6 ""Contenere il costo del lavoro"" 
+7 ""Migliorare la produttività degli addetti"" 
+8 ""Integrare le prestazioni del sistema socio-assistenziale"" 
+9 ""Nessuno"" .
+VALUE LABEL Q03_2
+1 ""Rendere sostenibile a lungo termine il successo aziendale"" 
+2 ""Fidelizzare i lavoratori più qualificati"" 
+3 ""Fidelizzare i lavoratori in generale"" 
+4 ""Migliorare il clima aziendale e la soddisfazione dei lavoratori"" 
+5 ""Migliorare la reputazione dell'impresa/ente"" 
+6 ""Contenere il costo del lavoro"" 
+7 ""Migliorare la produttività degli addetti"" 
+8 ""Integrare le prestazioni del sistema socio-assistenziale"" 
+9 ""Nessuno"" ."

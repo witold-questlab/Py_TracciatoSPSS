@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
-import os, json, csv, pickle
+import os, json, csv, pickle, re, shutil
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
@@ -18,3 +18,14 @@ def ensure_json_exists(json_file):
         os.makedirs(os.path.dirname(json_file), exist_ok=True)
         with open(json_file, 'w', encoding='utf-8') as file:
             json.dump({}, file, indent=4)
+
+def extract_fieldset(content):
+    """
+    Extracts the first <fieldset> ... </fieldset> block from the given content.
+    If no fieldset is found, returns the original content.
+    """
+    match = re.search(r"<fieldset[^>]*>.*?</fieldset>", content, re.DOTALL | re.IGNORECASE)
+    if match:
+        return match.group(0)
+    else:
+        return content

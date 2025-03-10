@@ -93,7 +93,8 @@ class UpdatePage(ttk.Frame):
         key = self.record_keys[self.current_index]
         record = self.generated_data.get(key, {})
         self.ascx_text.delete("1.0", tk.END)
-        self.ascx_text.insert(tk.END, record.get("ascx", ""))
+        fieldset_content = extract_fieldset(record.get("ascx", ""))
+        self.ascx_text.insert(tk.END, fieldset_content)
         self.type_dropdown.set(record.get("type", self.type_options[0]))
         self.spss_text.delete("1.0", tk.END)
         self.spss_text.insert(tk.END, record.get("spss", ""))
@@ -121,8 +122,8 @@ class UpdatePage(ttk.Frame):
             
     def update_record(self):
         """
-        Take the current inputs, append them to training data (CSV and JSON),
-        and update the model by retraining on the full training data.
+Take the current inputs, append them as a new training record,
+    and then remove the corresponding record from generated_data.json.
         """
         ascx_val = self.ascx_text.get("1.0", tk.END).strip()
         type_val = self.type_dropdown.get().strip()
@@ -167,7 +168,29 @@ class UpdatePage(ttk.Frame):
             self.status_var.set(f"Error updating training JSON: {e}")
             return
         
+        # Remove the current record from generated_data (and update the file)
+        current_key = self.record_keys[self.current_index]
+        if current_key in self.generated_data:
+            del self.generated_data[current_key]
+        try:
+            with open(self.generated_json_file, 'w', encoding='utf-8') as f:
+                json.dump(self.generated_data, f, indent=4)
+        except Exception as e:
+            self.status_var.set(f"Error updating generated JSON: {e}")
+            return
+        
         self.status_var.set(f"Record updated and added as ID {new_id} in training data.")
+
+        # Update record_keys list and adjust current_index if needed
+        self.record_keys = list(self.generated_data.keys())
+        if not self.record_keys:
+            self.clear_fields()
+            self.record_label.config(text="Record 0/0")
+            self.status_var.set("All generated records have been processed.")
+        else:
+            if self.current_index >= len(self.record_keys):
+                self.current_index = max(0, len(self.record_keys) - 1)
+            self.load_current_record()
         
     def update_model(self):
         """Retrain the model using all training data from the training JSON file."""

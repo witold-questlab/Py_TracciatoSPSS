@@ -75,8 +75,9 @@ class TrainPage(ttk.Frame):
         if file_path:
             self.file_label.config(text=os.path.basename(file_path))
             try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    self.ascx_content = f.read()
+                with open(file_path, 'r', encoding='utf-8', errors="replace") as f:
+                    raw_content = f.read()
+                self.ascx_content = extract_fieldset(raw_content)
                 self.status_var.set("ASCX file loaded successfully.")
             except Exception as e:
                 self.status_var.set(f"Error reading file: {e}")
@@ -94,7 +95,7 @@ class TrainPage(ttk.Frame):
         type_value = self.type_dropdown.get().strip()
         # Retrieve SPSS variable label text and ensure it starts with "VARIABLE LABEL"
         var_text = self.var_label_text.get("1.0", tk.END).strip()
-        if var_text and not var_text.upper().startswith("VARIABLE LABEL"):
+        if var_text and "VARIABLE LABEL" not in var_text.upper():
             var_text = "VARIABLE LABEL " + var_text
 
         # Retrieve SPSS value label text and ensure it starts with "VALUE LABEL"

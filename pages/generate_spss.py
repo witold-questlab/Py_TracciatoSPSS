@@ -94,6 +94,17 @@ class WorkPage(ttk.Frame):
         if not self.model_loaded:
             self.status_var.set("Model not loaded. Cannot generate predictions.")
             return
+        
+        # Prompt for an output folder for the spss.txt file.
+        txt_output_folder = filedialog.askdirectory(title="Select output folder for spss.txt")
+        if not txt_output_folder:
+            self.status_var.set("No output folder selected for spss.txt.")
+            return
+
+        out_txt = os.path.join(txt_output_folder, "generated_spss.txt")
+        # The CSV and JSON files remain stored in the default data folder.
+        out_csv = self.output_csv  # e.g., "./data/generated_data.csv"
+        out_json = self.output_json  # e.g., "./data/generated_data.json"
 
         generated_records = {}  # For JSON
         output_lines = []       # For spss.txt
@@ -127,7 +138,7 @@ class WorkPage(ttk.Frame):
         # Write spss.txt
         try:
             os.makedirs(os.path.dirname(self.output_txt), exist_ok=True)
-            with open(self.output_txt, 'w', encoding='utf-8') as f:
+            with open(out_txt, 'w', encoding='utf-8') as f:
                 f.write("\n".join(output_lines))
         except Exception as e:
             self.status_var.set(f"Error writing spss.txt: {e}")
@@ -135,8 +146,8 @@ class WorkPage(ttk.Frame):
 
         # Write CSV file
         try:
-            os.makedirs(os.path.dirname(self.output_csv), exist_ok=True)
-            with open(self.output_csv, 'w', newline='', encoding='utf-8') as f:
+            os.makedirs(os.path.dirname(out_csv), exist_ok=True)
+            with open(out_csv, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow(["ascx", "type", "spss"])
                 writer.writerows(generated_csv_rows)
@@ -146,8 +157,8 @@ class WorkPage(ttk.Frame):
 
         # Write JSON file
         try:
-            os.makedirs(os.path.dirname(self.output_json), exist_ok=True)
-            with open(self.output_json, 'w', encoding='utf-8') as f:
+            os.makedirs(os.path.dirname(out_json), exist_ok=True)
+            with open(out_json, 'w', encoding='utf-8') as f:
                 json.dump(generated_records, f, indent=4)
         except Exception as e:
             self.status_var.set(f"Error writing JSON: {e}")
