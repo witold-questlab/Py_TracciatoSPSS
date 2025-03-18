@@ -16,21 +16,21 @@ class TrainPage(ttk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        title = ttk.Label(self, text="Train AI using existing data", font=("Arial", 14))
+        title = ttk.Label(self, text=get_translation("train_1"), font=("Arial", 14))
         title.pack(pady=10)
 
         # Frame for file selection
         file_frame = ttk.Frame(self)
         file_frame.pack(pady=5, fill='x', padx=10)
-        browse_button = ttk.Button(file_frame, text="Browse ASCX File", command=self.browse_file)
+        browse_button = ttk.Button(file_frame, text=get_translation("train_2"), command=self.browse_file)
         browse_button.pack(side='left')
-        self.file_label = ttk.Label(file_frame, text="No file selected", wraplength=300)
+        self.file_label = ttk.Label(file_frame, text=get_translation("train_3"), wraplength=300)
         self.file_label.pack(side='left', padx=10)
 
         # Entry for "Type" (single-line input)
         type_frame = ttk.Frame(self)
         type_frame.pack(pady=5, fill='x', padx=10)
-        type_label = ttk.Label(type_frame, text="Type:")
+        type_label = ttk.Label(type_frame, text=get_translation("update_type"))
         type_label.pack(side='left')
         self.type_dropdown = ttk.Combobox(type_frame, values=self.type_options, state="readonly")
         self.type_dropdown.set(self.type_options[0])
@@ -53,7 +53,7 @@ class TrainPage(ttk.Frame):
         self.val_label_text.pack(fill='x', padx=5)
 
         # Button to add the record to CSV and JSON
-        add_button = ttk.Button(self, text="Add Record", command=self.add_record)
+        add_button = ttk.Button(self, text=get_translation("train_4"), command=self.add_record)
         add_button.pack(pady=10)
 
         # Separator
@@ -61,7 +61,7 @@ class TrainPage(ttk.Frame):
         separator.pack(fill='x', padx=10, pady=10)
 
         # Button to train the model
-        train_button = ttk.Button(self, text="Train Model", command=self.train_model)
+        train_button = ttk.Button(self, text=get_translation("train_5"), command=self.train_model)
         train_button.pack(pady=10)
 
         # Status message label
@@ -78,17 +78,17 @@ class TrainPage(ttk.Frame):
                 with open(file_path, 'r', encoding='utf-8', errors="replace") as f:
                     raw_content = f.read()
                 self.ascx_content = extract_fieldset(raw_content)
-                self.status_var.set("ASCX file loaded successfully.")
+                self.status_var.set(get_translation("train_6"))
             except Exception as e:
-                self.status_var.set(f"Error reading file: {e}")
+                self.status_var.set(f"{get_translation("train_7")} {e}")
                 self.ascx_content = ""
         else:
-            self.status_var.set("No file selected.")
+            self.status_var.set(get_translation("train_8"))
     
     def add_record(self):
         """Add a new record to both the CSV and JSON files."""
         if not self.ascx_content:
-            self.status_var.set("Please browse and select an ASCX file first.")
+            self.status_var.set(get_translation("train_9"))
             return
 
         # Get user inputs
@@ -106,7 +106,7 @@ class TrainPage(ttk.Frame):
         # Combine the two SPSS fields (using a newline as separator)
         combined_spss = var_text + "\n" + val_text
         if not type_value or not combined_spss.strip():
-            self.status_var.set("Please fill in both the Type and SPSS fields.")
+            self.status_var.set(get_translation("train_10"))
             return
 
         # Append to CSV
@@ -115,7 +115,7 @@ class TrainPage(ttk.Frame):
                 writer = csv.writer(file)
                 writer.writerow([self.ascx_content, type_value, combined_spss])
         except Exception as e:
-            self.status_var.set(f"Error updating CSV: {e}")
+            self.status_var.set(f"{get_translation("train_11")} {e}")
             return
 
         # Update JSON file
@@ -123,7 +123,7 @@ class TrainPage(ttk.Frame):
             with open(self.json_file, 'r', encoding='utf-8') as file:
                 data = json.load(file)
         except Exception as e:
-            self.status_var.set(f"Error loading JSON data: {e}")
+            self.status_var.set(f"{get_translation("train_12")} {e}")
             return
 
         # Generate new record ID (incremental numeric string)
@@ -142,13 +142,13 @@ class TrainPage(ttk.Frame):
             with open(self.json_file, 'w', encoding='utf-8') as file:
                 json.dump(data, file, indent=4)
         except Exception as e:
-            self.status_var.set(f"Error updating JSON: {e}")
+            self.status_var.set(f"{get_translation("train_13")} {e}")
             return
 
-        self.status_var.set(f"Record {new_id} added to CSV and JSON.")
+        self.status_var.set(f"Record {new_id} {get_translation("train_14")}")
 
         # Reset fields
-        self.file_label.config(text="No file selected")
+        self.file_label.config(text=get_translation("train_3"))
         self.ascx_content = ""
         self.type_dropdown.set(self.type_options[0])
         self.var_label_text.delete("1.0", tk.END)
@@ -165,11 +165,11 @@ class TrainPage(ttk.Frame):
             with open(self.json_file, 'r', encoding='utf-8') as file:
                 data = json.load(file)
         except Exception as e:
-            self.status_var.set(f"Error reading {self.json_file}: {e}")
+            self.status_var.set(f"{get_translation("train_15")} {self.json_file}: {e}")
             return
 
         if not data:
-            self.status_var.set("Training data is empty.")
+            self.status_var.set(get_translation("train_16"))
             return
 
         # Prepare training lists.
@@ -192,7 +192,7 @@ class TrainPage(ttk.Frame):
                     clf = saved.get("clf")
                     trained_ids = set(saved.get("trained_ids", []))
             except Exception as e:
-                self.status_var.set(f"Error loading existing model: {e}")
+                self.status_var.set(f"{get_translation("train_17")} {e}")
                 return
 
         # Determine new record IDs from JSON
@@ -200,7 +200,7 @@ class TrainPage(ttk.Frame):
         new_ids = current_ids - trained_ids
 
         if not new_ids and trained_ids:
-            self.status_var.set("No new training examples found. Model not updated.")
+            self.status_var.set(get_translation("train_18"))
             return
 
         vectorizer = CountVectorizer()
@@ -221,4 +221,4 @@ class TrainPage(ttk.Frame):
         with open(self.model_file, "wb") as f:
             pickle.dump(model_data, f)
 
-        self.status_var.set(f"Training complete. Model saved as {os.path.basename(self.model_file)}")
+        self.status_var.set(f"{get_translation("train_19")} {os.path.basename(self.model_file)}")

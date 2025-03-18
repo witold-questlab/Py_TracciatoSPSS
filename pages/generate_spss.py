@@ -19,18 +19,18 @@ class WorkPage(ttk.Frame):
         self.load_model()
 
     def create_widgets(self):
-        title = ttk.Label(self, text="Generate SPSS File", font=("Arial", 14))
+        title = ttk.Label(self, text=get_translation("generate_spss_title"), font=("Arial", 14))
         title.pack(pady=10)
 
         # Folder selection frame
         folder_frame = ttk.Frame(self)
         folder_frame.pack(pady=5, fill='x', padx=10)
-        browse_button = ttk.Button(folder_frame, text="Browse ASCX Folder", command=self.browse_folder)
+        browse_button = ttk.Button(folder_frame, text=get_translation("generate_spss_1"), command=self.browse_folder)
         browse_button.pack(side='left')
-        self.folder_label = ttk.Label(folder_frame, text="No folder selected", wraplength=300)
+        self.folder_label = ttk.Label(folder_frame, text=get_translation("generate_spss_2"), wraplength=300)
         self.folder_label.pack(side='left', padx=10)
 
-        generate_button = ttk.Button(self, text="Generate SPSS", command=self.generate_spss)
+        generate_button = ttk.Button(self, text=get_translation("generate_spss_3"), command=self.generate_spss)
         generate_button.pack(pady=10)
 
         self.status_var = tk.StringVar()
@@ -42,13 +42,13 @@ class WorkPage(ttk.Frame):
         if folder:
             self.selected_folder = folder
             self.folder_label.config(text=os.path.basename(folder))
-            self.status_var.set("Folder selected.")
+            self.status_var.set(get_translation("generate_spss_4"))
         else:
-            self.status_var.set("No folder selected.")
+            self.status_var.set(get_translation("generate_spss_5"))
 
     def load_model(self):
         if not os.path.exists(self.model_file):
-            self.status_var.set("Model file not found. Please train the model first.")
+            self.status_var.set(get_translation("generate_spss_6"))
             return
         try:
             with open(self.model_file, 'rb') as f:
@@ -61,9 +61,9 @@ class WorkPage(ttk.Frame):
                     # Assume tuple: (vectorizer, clf)
                     self.vectorizer, self.clf = model_data
             self.model_loaded = True
-            self.status_var.set("Model loaded successfully.")
+            self.status_var.set(get_translation("generate_spss_7"))
         except Exception as e:
-            self.status_var.set(f"Error loading model: {e}")
+            self.status_var.set(f"{get_translation("generate_spss_8")} {e}")
             self.model_loaded = False
 
     def predict_spss(self, ascx_content):
@@ -84,21 +84,21 @@ class WorkPage(ttk.Frame):
             X_vect = self.vectorizer.transform([input_text])
             pred = self.clf.predict(X_vect)[0]
         except Exception as e:
-            pred = f"Prediction error: {e}"
+            pred = f"{get_translation("generate_spss_9")} {e}"
         return predicted_type, pred
 
     def generate_spss(self):
         if not self.selected_folder:
-            self.status_var.set("Please select an ASCX folder first.")
+            self.status_var.set(get_translation("generate_spss_10"))
             return
         if not self.model_loaded:
-            self.status_var.set("Model not loaded. Cannot generate predictions.")
+            self.status_var.set(get_translation("generate_spss_11"))
             return
         
         # Prompt for an output folder for the spss.txt file.
-        txt_output_folder = filedialog.askdirectory(title="Select output folder for spss.txt")
+        txt_output_folder = filedialog.askdirectory(title=get_translation("generate_spss_12"))
         if not txt_output_folder:
-            self.status_var.set("No output folder selected for spss.txt.")
+            self.status_var.set(get_translation("generate_spss_13"))
             return
 
         out_txt = os.path.join(txt_output_folder, "generated_spss.txt")
@@ -119,7 +119,7 @@ class WorkPage(ttk.Frame):
                         with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
                     except Exception as e:
-                        self.status_var.set(f"Error reading {filename}: {e}")
+                        self.status_var.set(f"{get_translation("generate_spss_14")} {filename}: {e}")
                         continue
 
                     predicted_type, predicted_spss = self.predict_spss(content)
@@ -141,7 +141,7 @@ class WorkPage(ttk.Frame):
             with open(out_txt, 'w', encoding='utf-8') as f:
                 f.write("\n".join(output_lines))
         except Exception as e:
-            self.status_var.set(f"Error writing spss.txt: {e}")
+            self.status_var.set(f"{get_translation("generate_spss_15")} {e}")
             return
 
         # Write CSV file
@@ -152,7 +152,7 @@ class WorkPage(ttk.Frame):
                 writer.writerow(["ascx", "type", "spss"])
                 writer.writerows(generated_csv_rows)
         except Exception as e:
-            self.status_var.set(f"Error writing CSV: {e}")
+            self.status_var.set(f"{get_translation("generate_spss_16")} {e}")
             return
 
         # Write JSON file
@@ -161,17 +161,17 @@ class WorkPage(ttk.Frame):
             with open(out_json, 'w', encoding='utf-8') as f:
                 json.dump(generated_records, f, indent=4)
         except Exception as e:
-            self.status_var.set(f"Error writing JSON: {e}")
+            self.status_var.set(f"{get_translation("generate_spss_17")} {e}")
             return
 
         self.status_var.set(
-            f"Generation complete. Files created:\n"
+            f"{get_translation("generate_spss_18")}"
             f"{os.path.basename(self.output_txt)}, {os.path.basename(self.output_csv)}, and {os.path.basename(self.output_json)}."
         )
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.title("SPSS Generation")
+    root.title(get_translation("generate_spss_title"))
     root.geometry("600x400")
     work_page = WorkPage(root)
     work_page.pack(expand=True, fill='both')

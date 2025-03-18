@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --add-data "data;data" --add-data "image.ico;." --name Py_tracciatoSPSS --icon image.ico main.py
